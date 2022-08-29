@@ -1,26 +1,56 @@
+
+<!DOCTYPE html>
 <html>
+
 <head>
-       <meta charset="UTF-8" />
-<body>
-      <div>
-         <nav>
-            <ul>
-               <li>Home</li>
-               <li>Mi portafolio</li>
-               <li>Mi Aprendizaje</li>
-               <ul>
-                  <li>fuentes</li>
-                  <ul>
-                     <li><a href="fuenteN.html"> fuente N </a></li>
-                     <li><a href="fuenteD.html"> fuente D </a></li>
-                     <li><a href="fuenteG.html"> fuente G </a></li>
-                  </ul>
-               </ul>
-            </ul>
-         </nav>
-      </div>
-    </body>
-   
-    <link rel="stylesheet" href="css/style.css">
-</head>    
+	<title>snt.rip</title>
+	<link rel="icon" 6yeEJKvNRXWoMJSbWe4Gnmck43zLGXLBRCdE6xsD9tZ4 />
+	<link rel="stylesheet" href="../assets/main.css" />
+</head>
+
+<body onresize="resize()" onload="main()">
+<canvas id="canvas-background"></canvas>
+<script src="../assets/cursor.js"></script>
+<script>
+  function videoPlay() {
+      var video = document.getElementById("video");
+			video.volume = 0.05;
+			video.play();
+  }
+
+	function audioPlay() {
+			var audio = document.getElementById("audio");
+			audio.volume = 0.05;
+			audio.play();
+	}
+</script>
+
+<video loop preload="auto" class="vidoverlay" id="video">
+	<source src="https://cdn.discordapp.com/attachments/1002393755380359241/1013890345475526776/overlay.mp4" type="video/mp4">
+</video>
+
+<audio loop preload="auto" id="audio">
+	<source src="https://cdn.discordapp.com/attachments/1002393755380359241/1013890353553747999/song.mp3" type="audio/mpeg">
+</audio>
+
+<input type="checkbox" autocomplete="off" id="overlay-toggle">
+<div class="overlay fullscreen">
+	<label for="overlay-toggle" onclick="videoPlay(); audioPlay(); ">
+		<span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;">click</span>
+		<span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">click</span>
+	</label>
+</div>
+
+<div id="center" align="center">
+	<span>
+		<p class="hover graffiti" style="font-size: 200px">snt.rip</a>
+		<p class="hover">socials:</p>
+		<p class="hover">
+			<a href="https://discord.gg/tokengrabber" target="_blank" class="hover">discord</a> |
+			<a href="https://matthy.wtf/instagram" target="_blank" class="hover">instagram</a>
+		</p>
+		<br><br><a href="https://snt.vercel.app/" class="hover">home</a>
+	</span>
+</div>
+
 </html>
